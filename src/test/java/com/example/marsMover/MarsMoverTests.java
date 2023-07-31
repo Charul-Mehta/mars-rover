@@ -103,4 +103,11 @@ public class MarsMoverTests {
         Assertions.assertEquals("Failure", response.getSuccess());
         Assertions.assertEquals("Encountered obstacle", response.getMessage());
     }
+
+    @Test
+    void testMarsRoversForObstacle() {
+        MarsRover rover=new MarsRover();
+        boolean result =rover.obstacleCheck(0,0);
+        Assertions.assertFalse(result);
+    }
 }

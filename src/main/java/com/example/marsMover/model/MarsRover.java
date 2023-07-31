@@ -165,9 +165,11 @@ public class MarsRover implements Rover {
     }
 
     public boolean obstacleCheck(int xCord, int yCord){
-        for (Obstacle obstacle : obstacles) {
-            if (obstacle.getXCoordinate() == xCord && obstacle.getYCoordinate() == yCord) {
-                return true;
+        if(this.obstacles!=null){
+            for (Obstacle obstacle : this.obstacles) {
+                if (obstacle.getXCoordinate() == xCord && obstacle.getYCoordinate() == yCord) {
+                    return true;
+                }
             }
         }
         return false;
